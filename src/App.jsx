@@ -2,10 +2,11 @@ import { useState } from 'react'
 import './App.css'
 import { quotes } from './assets/Quotes';
 import Moon from './Moon';
+import Sound from './Sound';
 
 function App() {
   const [quote, setQuote] = useState(Math.floor(Math.random() * quotes.length));
-  const affirmation = quotes[quote];
+  const affirmation = quotes[quote].quote;
 
   
 
@@ -14,7 +15,7 @@ function App() {
           <Moon/>
           
           {/* Word Box */}
-          <div className='border-solid border-4 dark:border-[#969faf] border-[#b7b3b1] rounded dark:bg-[#1e2341] bg-[#f3e0d7] h-[300px] w-[500px] flex items-center'>
+          <div className='border-solid border-4 dark:border-[#969faf] border-[#b7b3b1] rounded dark:bg-[#1e2341] bg-[#f3e0d7] w-[300px] h-[250px] md:h-[300px] md:w-[500px] flex items-center'>
               <p className='text-4xl m-2 self-center w-full dark:text-[#fffff6] text-[#1a1814]'>{affirmation}</p>
           </div>
           {/* Button that says 'Press for Affirmation' */}
